@@ -1,41 +1,29 @@
 ﻿
-public class Point
-{
-    private double Abscisse;            //L'attribut Abscisse
-    private double Ordonne;             //L'attribut Ordonne
-
-    public double getAbscisse()         //Le getter de l'attribut Abscisse
+    public class Point
     {
-        return Abscisse;
-    }
+        private double x;
+        private double y;
 
-    public void setAbscisse(double a)   //Le setter de l'attribut Abscisse
-    {
-        Abscisse = a;
-    }
+        public double X
+        {
+            get { return x; }
+            set { x = value; }
+        }
 
-    public double getOrdonne()          //Le getter de l'attribut Ordonne
-    {
-        return Ordonne;
-    }
+        public double Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
 
-    public void setOrdonne(double o)    //Le setter de l'attribut Ordonne
-    {
-        Ordonne = o;
-    }
+        public Point(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
+        }
 
-    public Point()                     //Le constructeur par défaut
-    {
+        public void Afficher()
+        {
+            Console.Out.WriteLine("POINT(" + x + "," + y + ")");
+        }
     }
-
-    public Point(double a, double o)   //Le constructeur d'initialisation
-    {
-        Abscisse = a;
-        Ordonne = o;
-    }
-
-    public double Norme()              //La méthode Norme
-    {
-        return Math.Sqrt(Abscisse * Abscisse + Ordonne * Ordonne);
-    }
-}
